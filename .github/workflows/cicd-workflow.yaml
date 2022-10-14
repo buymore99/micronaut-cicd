@@ -14,3 +14,11 @@ jobs:
           echo "Starting the build job."
       - name: Checkout
         uses: actions/checkout@v2.5.0
+      - name: 'Setup Java JDK'
+        uses: actions/setup-java@v3.5.1
+        with:
+          java-version: 19
+          distribution: 'temurin'
+      - name: 'Check Java Version'
+        run: |
+          java --version
